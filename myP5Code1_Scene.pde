@@ -1,4 +1,6 @@
 var bakeryLabels = ["Crossiants","Ice Cream","Cookies","Cake"];
+var priceLabels = ["$5","$10","$15","$20"];
+var sasukeImage=loadImage("https://cdn.shopify.com/s/files/1/0604/8235/5283/files/555.gif?v=1767689561")
 
 setup = function() {
 
@@ -18,6 +20,11 @@ setup = function() {
   text(bakeryLabels[1], 70, 185);
    text(bakeryLabels[2], 70, 265);
  text(bakeryLabels[3], 70, 345);
+
+   text(priceLabels[0], 300, 105);
+  text(priceLabels[1], 300, 185);
+   text(priceLabels[2], 300, 265);
+ text(priceLabels[3], 300, 345);
 
    //icecream
    var icecreamX = 60;
@@ -42,13 +49,18 @@ setup = function() {
   textSize(30);
 
      for (var i=55; i < 350; i+=20){
-      text("🍰",50,i);
+      text("🍰",i,320);
      }  
 
  
 }
 
 draw = function(){   
+
+if(mousePressed)
+{
+ image(sasukeImage,mouseX,mouseY,100,100)
+}
 
 }
 
